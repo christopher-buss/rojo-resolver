@@ -1,0 +1,19 @@
+{
+	"extends": "../../tsconfig.node.json",
+	"compilerOptions": {
+		"types": ["vitest/globals", "vitest/importMeta", "vite/client", "node", "vitest"],
+		"outDir": "./out-tsc/vitest"
+	},
+	"references": [
+		{
+			"path": "./tsconfig.lib.json"
+		}
+	],
+	"include": [
+		"eslint.config.ts",
+		"scripts/*.ts",
+		"src**/*.d.ts",
+		"src**/*.spec.tsx",
+		"src/**/*.spec.ts"
+	]
+}

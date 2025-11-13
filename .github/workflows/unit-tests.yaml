@@ -1,4 +1,4 @@
-name: UnitTests
+name: unit-tests
 
 on:
   pull_request:
@@ -19,9 +19,9 @@ jobs:
       - name: Checkout roblox-ts repo
         uses: actions/checkout@v4
         with:
-          repository: roblox-ts/roblox-ts
           path: roblox-ts
 
+          repository: roblox-ts/roblox-ts
       - name: Install Foreman
         uses: Roblox/setup-foreman@v2.1
         with:
@@ -30,16 +30,16 @@ jobs:
       - name: Setup rojo-resolver repo
         run: |
           cd rojo-resolver
-          npm install
-          npm run build
+          ni
+          nr build
 
       - name: Setup roblox-ts repo
         run: |
           cd roblox-ts
           foreman install
-          npm install
-          npm install --install-links ../rojo-resolver
-          npm run update-test-types
+          ni
+          ni --install-links ../rojo-resolver
+          nr update-test-types
 
       - name: Run Tests
         run: |

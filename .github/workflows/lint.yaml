@@ -1,4 +1,4 @@
-name: ESLint
+name: lint
 
 on:
   pull_request:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   lint:
-    name: ESLint
+    name: lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
