@@ -21,7 +21,10 @@
 	"files": ["dist", "CHANGELOG.md", "rojo-schema.json", "!**/*.js.map", "!**/*.tsbuildinfo"],
 	"scripts": {
 		"build": "tsdown",
-		"prepublishOnly": "pnpm build"
+		"prepublishOnly": "pnpm build",
+		"test": "vitest",
+		"test:coverage": "vitest --coverage",
+		"test:watch": "vitest watch"
 	},
 	"dependencies": {
 		"ajv": "catalog:cli"
@@ -29,6 +32,7 @@
 	"devDependencies": {
 		"@types/fs-extra": "catalog:types",
 		"@types/node": "catalog:types",
+		"@vitest/coverage-v8": "catalog:test",
 		"ts-patch": "catalog:tsc",
 		"tsdown": "catalog:build",
 		"typescript": "catalog:tsc",
